@@ -1,0 +1,49 @@
+{
+    "projects" : [
+        {
+            "id": "0",
+            "project_name": "Employee Directory",
+            "description": "Dynamically generated and displayed employee directory.",
+            "technologies": "JavaScript, Random User Generator API",
+            "live-link": "https://bet-zua.github.io/Public-API-Requests/",
+            "github_link": "https://github.com/bet-zua/Public-API-Requests",
+            "image_urls": ""
+        },
+        {
+            "id": "1",
+            "project_name": "OOP Game Show App",
+            "description": "Word guessing game called 'Guess the Idiom'.",
+            "technologies": "JavaScript, OOP",
+            "live-link": "https://bet-zua.github.io/OOP-Game-Show-App/",
+            "github_link": "https://github.com/bet-zua/OOP-Game-Show-App",
+            "image_urls": ""
+        },
+        {
+            "id": "2",
+            "project_name": "Conference Sign-up Form",
+            "description": "Interactive form with input validation, and accessibility features.",
+            "technologies": "JavaScript",
+            "live-link": "https://bet-zua.github.io/Interactive_Form/",
+            "github_link": "https://github.com/bet-zua/Interactive_Form",
+            "image_urls": ""
+        },
+        {
+            "id": "3",
+            "project_name": "Student Directory",
+            "description": "Searchable, dynamically displayed student directory.",
+            "technologies": "JavaScript",
+            "live-link": "https://bet-zua.github.io/Pagination-And-Filtering/",
+            "github_link": "https://github.com/bet-zua/Pagination-And-Filtering",
+            "image_urls": ""
+        },
+        {
+            "id": "4",
+            "project_name": "Random Quote Generator",
+            "description": "Vanilla JS Random Quote Generator",
+            "technologies": "JavaScript",
+            "live-link": "https://bet-zua.github.io/Random-Quote-Generator/",
+            "github_link": "https://github.com/bet-zua/Random-Quote-Generator",
+            "image_urls": ""
+        }
+    ]
+}
