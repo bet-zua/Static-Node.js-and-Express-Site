@@ -2,9 +2,10 @@
   "name": "static-node.js-and-express-site",
   "version": "1.0.0",
   "description": "Techdegree profile site",
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js"
   },
   "repository": {
     "type": "git",
@@ -19,6 +20,7 @@
   "keywords": [],
   "dependencies": {
     "express": "^4.17.1",
+    "nodemon": "^2.0.7",
     "pug": "^3.0.2"
   }
 }
