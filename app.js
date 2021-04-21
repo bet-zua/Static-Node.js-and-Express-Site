@@ -13,20 +13,27 @@ app.use('/static', express.static('public'));
 app.get('/', (req, res)=>{
     res.render('index', { projects });
 });
-//render About page
-app.get('/about', (req, res)=>{
+// render About page
+app.get('/about', (req, res, next)=>{
     res.render('about');
+    // const err = new Error();
+    // err.status = 500;
+    // err.message = "Unexpected server error!";
+    // next(err);
 });
-//render dynamic Project routes
-app.get('/projects/:id', (req, res)=>{
-    const id = req.params.id; //adding data as an object that contains data to be passed to Pug template
+// render dynamic Project routes
+app.get('/projects/:id', (req, res, next)=>{
+    const id = req.params.id; // adding data as an object that contains data to be passed to Pug template
     const project = projects[id];
     if (project) {
-        console.log('project page loaded');
+        // console.log('project page loaded');
         res.locals.data = projects;
         return res.render('project', { project });
     } else {
-        res.redirect('/page-not-found');
+        const err = new Error();
+        err.status = 404;
+        err.message = "This page does not exist, oops!"
+        next(err);
     }
 });
 
@@ -34,24 +41,24 @@ app.get('/projects/:id', (req, res)=>{
  * Error Handling 
 */
 app.use((req, res, next)=>{
-    console.log('404: This page does not exist, sorry!');
+    console.log('404: This page does not exist, oops!');
 
     const err = new Error();
     err.status = 404;
-    err.message = "404: This page does not exist, sorry!";   
+    err.message = "This page does not exist, oops!";   
     
     res.status(404);
-    res.render('page-not-found');
+    res.render('page-not-found', { err });
 });
 app.use((err, req, res, next)=>{
     console.log('500: Unexpected server error.');
 
-    if (err.status === 400 ){
-        res.status(400);
+    if (err.status === 404 ){
+        res.status(404);
         res.render('page-not-found', { err });
     } else {
-        //set status and message if they do not exist
-        err.message = err.message || '500: Unexpected server error.';
+        // set status and message if they do not exist
+        err.message = err.message || 'Unexpected server error.';
         res.status(err.status || 500);
         res.render('error', { err });
     }

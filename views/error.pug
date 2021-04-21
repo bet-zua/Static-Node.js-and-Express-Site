@@ -5,12 +5,16 @@ block content
   nav.nav
     a(href='/')
       span &larr;
-      |  Back
+      |  Home
 
     section.desk   
         h1= `${err.message}`
+        h5= `Error Status: ${err.status}`
+        .paper 
+            pre.stack-trace= err.stack 
+        .tear
 
   nav.nav
     a(href='/')
       span &larr;
-      |  Back
+      |  Home
