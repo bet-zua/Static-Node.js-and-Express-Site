@@ -22,13 +22,13 @@ body {
   line-height: 1.5;
   color: #0a0a0a;
   background: #fefefe;
-  background: #000;
+  background: rgb(0, 0, 0);
   transform: translateX(0px);
   transition: all 0.4s ease-out;
 }
 
 article {
-  background: #fefefe;
+  background: #DBD8AE;
 }
 
 h1,h2,h3,h4,h5,p{
@@ -51,7 +51,7 @@ h6{
 
 p{
   font-size: 15px;
-  color: #666;
+  color: #333;
 }
 
 a {
@@ -63,7 +63,7 @@ a {
   min-width: 320px;
   height: 100%;
   min-height: 100%;
-  background: #fefefe;
+  background: #DBD8AE;
 }
 
 .flex-row-wrap {
@@ -82,7 +82,7 @@ a {
   width: 100%;
   max-width: 1200px;
   padding: 40px 50px 30px;
-  background: #fefefe;
+  background: #DBD8AE;
   border-bottom: 1px solid #eaeaea;
 }
 
@@ -137,7 +137,7 @@ nav a span {
   height: 100%;
   min-height: 100%;
   padding: 20px;
-  background: #000;
+  background: #84732b;
 }
 
 .sidebar-info-box {
@@ -151,7 +151,8 @@ nav a span {
 .sidebar .thumbnail {
   width: 100%;
   max-width: 250px;
-  border: 4px solid #fff;
+  border-radius: 50%;
+  box-shadow: 10px 10px 10px #574F2A;
 }
 
 .dev-intro-box {
@@ -167,7 +168,7 @@ nav a span {
   text-rendering: optimizeLegibility;
   line-height: 1.6;
   font-size: 14px;
-  color: #999
+  color: #eaf4d3;
 }
 
 .sidebar a {
@@ -176,7 +177,7 @@ nav a span {
   font-size: 13px;
   letter-spacing: 2.5px;
   text-transform: uppercase;
-  color: #555;
+  color: #333;
 }
 
 .header {
@@ -259,7 +260,7 @@ nav a span {
   width: 100%;
   min-width: 100px;
   border: 4px solid #fff;
-  box-shadow: 0 0 0 1px rgba(10, 10, 10, 0.2);
+  box-shadow: 5px 5px #1c3a13;
 }
 
 
